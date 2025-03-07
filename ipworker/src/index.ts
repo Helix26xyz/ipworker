@@ -21,6 +21,6 @@ export default {
 			"latitude": request.headers.get('CF-IPLatitude'),
 			"longitude": request.headers.get('CF-IPLongitude')
 		}
-		return new Response(JSON.stringify(data));
+		return Response.json(data);
 	},
 } satisfies ExportedHandler<Env>;
